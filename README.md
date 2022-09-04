@@ -34,6 +34,21 @@ pip install -r requirements.txt
 4. Super users can check the loan applications and change status as per the application.
 
 
+## Functionality(endpoints)
+Endpoint | Functionality| Access
+------------ | ------------- | ------------- 
+POST /user/register-user | Registers a user | PUBLIC
+POST /user/register-admin | Register a super user | PUBLIC
+POST /auth-user-token | Create or fetch Token | PUBLIC
+POST /loan/loan-type | Create loan category | PRIVATE
+GET /loan/loan-type | Lists all loan types | PRIVATE
+PUT /loan/loan-type/{id:int} | Update loan category | PRIVATE
+POST /loan/loan-apply | Apply for new loan | PRIVATE
+PUT /loan/loan-apply/{id:int} | Update loan application | PRIVATE
+GET /loan/loan-validate | Lists all loan applications to admins | PRIVATE
+PUT /loan/loan-type/{id:int} | Update loan application status | PRIVATE
+
+
 
 
 
