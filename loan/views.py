@@ -16,14 +16,14 @@ from rest_framework.response import Response
 from rest_framework import status
 
 
-class LoanViewsets(CreateModelMixin,UpdateModelMixin,GenericViewSet):
+class LoanViewsets(CreateModelMixin,UpdateModelMixin,ListModelMixin,GenericViewSet):
     """ Loan Viewset """
     serializer_class = LoanSerializers
     queryset = Loan.objects.all()
     permission_classes = [IsAuthenticated,IsSuperuser,]
 
 
-class LoanApplicationViewsets(CreateModelMixin,UpdateModelMixin,ListModelMixin,GenericViewSet):
+class LoanApplicationViewsets(CreateModelMixin,UpdateModelMixin,GenericViewSet):
     """ Loan application viewsets """
     serializer_class = LoanApplicationSerializers
     queryset = LoanApplication.objects.all()
