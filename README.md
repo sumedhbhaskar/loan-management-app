@@ -7,13 +7,12 @@
 2. Django REST framework
 3. SQLite
 
+<<<<<<< HEAD
+=======
+**Steps to run the project
+>>>>>>> 9868ddc4387a2064b1b1491369bb622d49b298fa
+**Steps to run the project
 
-### Steps to run the projects:
-
-**Pre-requites:**
-1. python3.8 or greater
-
-**Steps:**
 
 1. Open cmd in your directory and run below commands for initial setup
 
