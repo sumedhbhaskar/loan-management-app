@@ -128,5 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-#venv
+# venv
 env-loan-app
+
+# removing media content
+media/*

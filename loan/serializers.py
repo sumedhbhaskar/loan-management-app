@@ -4,6 +4,7 @@ Serializers for Loan app
 
 from rest_framework import serializers
 from .models import Loan, LoanApplication
+from user.models import User
 
 
 class LoanSerializers(serializers.ModelSerializer):
@@ -16,11 +17,13 @@ class LoanSerializers(serializers.ModelSerializer):
 class LoanApplicationSerializers(serializers.ModelSerializer):
     """serializers for Loan application"""
 
-    user = serializers.CharField(source='user.email',read_only=True)
+    user = serializers.PrimaryKeyRelatedField(many=False,queryset=User.objects.all())
 
     class Meta:
         model = LoanApplication
         fields = ['user','loan','age','gender','address','aadhaar']
+        read_only_fields = ['user']
+
 
 
 class LoanValidateSerializers(serializers.ModelSerializer):
