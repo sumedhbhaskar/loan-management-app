@@ -7,7 +7,7 @@ API endpoints for a Loan management app
 2. Django Rest framework
 3. SQLite
 
-##Steps to run the project
+**Steps to run the project
 
 -Open cmd and run below commands for initial setup
 
