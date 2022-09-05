@@ -26,6 +26,18 @@ python -m venv myenv
 myenv\Scripts\activate
 pip install -r requirements.txt
 ```
+2. Before deploying the local development server, migration is required.
+
+```sh
+python manage.py makemigrations
+python manage.py migrate
+```
+
+3. To run the project, enter below command in cmd
+
+```sh
+python manage.py runserver
+```
 
 #### Key features of the API:
 1. There are two roles in the app- user and superuser
